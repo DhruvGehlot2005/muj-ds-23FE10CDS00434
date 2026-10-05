@@ -1,0 +1,48 @@
+{
+  "dataset_name": "Academic Resume Section Classification Dataset",
+  "provenance": "Curated realistic synthetic academic dataset (no real PII)",
+  "total_training_examples": 405,
+  "total_held_out_test_cases": 63,
+  "number_of_classes": 9,
+  "valid_classes": [
+    "SUMMARY",
+    "CONTACT",
+    "EDUCATION",
+    "EXPERIENCE",
+    "PROJECTS",
+    "SKILLS",
+    "CERTIFICATIONS",
+    "ACHIEVEMENTS",
+    "OTHER"
+  ],
+  "class_distribution_training": {
+    "SUMMARY": 45,
+    "CONTACT": 45,
+    "EDUCATION": 45,
+    "EXPERIENCE": 45,
+    "PROJECTS": 45,
+    "SKILLS": 45,
+    "CERTIFICATIONS": 45,
+    "ACHIEVEMENTS": 45,
+    "OTHER": 45
+  },
+  "class_distribution_test_cases": {
+    "SUMMARY": 7,
+    "CONTACT": 7,
+    "EDUCATION": 7,
+    "EXPERIENCE": 7,
+    "PROJECTS": 7,
+    "SKILLS": 7,
+    "CERTIFICATIONS": 7,
+    "ACHIEVEMENTS": 7,
+    "OTHER": 7
+  },
+  "validation_report": {
+    "duplicate_count": 0,
+    "duplicates": [],
+    "empty_row_count": 0,
+    "invalid_labels": [],
+    "train_test_leakage_count": 0,
+    "is_valid": true
+  }
+}

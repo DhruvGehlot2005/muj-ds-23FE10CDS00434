@@ -1,0 +1,70 @@
+{
+  "categories": {
+    "Programming Languages": [
+      "Python", "JavaScript", "TypeScript", "Java", "C++", "C", "C#",
+      "Go", "Rust", "Ruby", "PHP", "Swift", "Kotlin", "R", "MATLAB",
+      "Scala", "Dart", "SQL", "Bash", "Shell"
+    ],
+    "Frameworks": [
+      "React", "Next.js", "Node.js", "Express.js", "Vue.js", "Angular",
+      "Django", "FastAPI", "Flask", "Spring Boot", "ASP.NET", "Ruby on Rails",
+      "Flutter", "PyTorch", "TensorFlow", "Keras", "Scikit-learn",
+      "Tailwind CSS", "Bootstrap"
+    ],
+    "Databases": [
+      "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Redis", "Oracle",
+      "Microsoft SQL Server", "Cassandra", "DynamoDB", "Elasticsearch", "Firebase"
+    ],
+    "Cloud": [
+      "AWS", "Google Cloud", "Microsoft Azure", "Heroku", "DigitalOcean",
+      "Cloudflare", "Vercel", "Netlify"
+    ],
+    "DevOps": [
+      "Docker", "Kubernetes", "Git", "GitHub Actions", "GitLab CI", "Jenkins",
+      "Terraform", "Ansible", "Linux", "Nginx", "CI/CD"
+    ],
+    "Machine Learning": [
+      "Natural Language Processing", "Computer Vision", "Large Language Models",
+      "Deep Learning", "Supervised Learning", "Unsupervised Learning",
+      "Feature Engineering", "Neural Networks", "Hugging Face", "Transformers"
+    ],
+    "Data Science": [
+      "Pandas", "NumPy", "SciPy", "Matplotlib", "Seaborn", "Tableau",
+      "Power BI", "Apache Spark", "Data Analysis", "Statistical Modeling"
+    ],
+    "Tools": [
+      "Postman", "Jira", "Figma", "VS Code", "Jupyter", "Swagger", "Docker Compose"
+    ]
+  },
+  "aliases": {
+    "js": "JavaScript",
+    "ts": "TypeScript",
+    "py": "Python",
+    "golang": "Go",
+    "reactjs": "React",
+    "react.js": "React",
+    "nextjs": "Next.js",
+    "next.js": "Next.js",
+    "nodejs": "Node.js",
+    "node.js": "Node.js",
+    "express": "Express.js",
+    "expressjs": "Express.js",
+    "vue": "Vue.js",
+    "vuejs": "Vue.js",
+    "postgres": "PostgreSQL",
+    "mongo": "MongoDB",
+    "k8s": "Kubernetes",
+    "gcp": "Google Cloud",
+    "azure": "Microsoft Azure",
+    "nlp": "Natural Language Processing",
+    "ml": "Machine Learning",
+    "dl": "Deep Learning",
+    "llm": "Large Language Models",
+    "llms": "Large Language Models",
+    "tf": "TensorFlow",
+    "sklearn": "Scikit-learn",
+    "scikit learn": "Scikit-learn",
+    "tailwind": "Tailwind CSS",
+    "tailwindcss": "Tailwind CSS"
+  }
+}

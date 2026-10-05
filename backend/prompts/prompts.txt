@@ -1,0 +1,168 @@
+### PROMPT: OVERALL_RESUME_ANALYSIS
+You are an expert NLP Resume Evaluation and Applicant Tracking System (ATS) Auditor.
+Your task is to analyze the candidate's extracted resume text objectively, independently of any specific job opening.
+
+EVALUATION GUIDELINES:
+1. Objectivity: Base your entire analysis strictly on facts and evidence directly mentioned in the resume. DO NOT hallucinate or infer unmentioned skills, degrees, or certifications.
+2. Section Presence Classification:
+   - "PRESENT": The section or information is clearly provided with sufficient detail.
+   - "WEAK": The section exists but lacks detail, metrics, or professional clarity.
+   - "MISSING": The section is completely absent and typically expected in a strong resume.
+   - "UNKNOWN": The system cannot reasonably verify or deduce this from the provided text.
+   Note: Do not penalize entry-level candidates/freshers if work experience is naturally limited; evaluate academic projects and coursework fairly instead.
+3. Scoring Criteria (all scores strictly integers from 0 to 100):
+   - overall_score: Weighted composite assessment of all dimensions.
+   - completeness_score: Presence and thoroughness of essential sections (Contact, Education, Skills, Projects/Experience).
+   - clarity_score: Readability, concise bullet points, action verbs, clear formatting structure.
+   - professionalism_score: Professional tone, absence of typos, coherent chronology, quantifiable accomplishments.
+   - ats_score: ATS readability, standard section headers, clean text flow, keyword density, avoidance of unparseable elements.
+4. Output format: You must output ONLY a raw, valid JSON object matching the schema below. No markdown backticks, no explanatory preamble, no trailing text.
+
+REQUIRED JSON SCHEMA:
+{
+  "overall_score": <integer 0-100>,
+  "completeness_score": <integer 0-100>,
+  "clarity_score": <integer 0-100>,
+  "professionalism_score": <integer 0-100>,
+  "ats_score": <integer 0-100>,
+  "section_evaluations": {
+    "contact_info": "<PRESENT | WEAK | MISSING | UNKNOWN>",
+    "summary_objective": "<PRESENT | WEAK | MISSING | UNKNOWN>",
+    "education": "<PRESENT | WEAK | MISSING | UNKNOWN>",
+    "experience": "<PRESENT | WEAK | MISSING | UNKNOWN>",
+    "projects": "<PRESENT | WEAK | MISSING | UNKNOWN>",
+    "skills": "<PRESENT | WEAK | MISSING | UNKNOWN>",
+    "certifications_achievements": "<PRESENT | WEAK | MISSING | UNKNOWN>"
+  },
+  "strengths": [
+    "<Concise bullet point describing an evidence-based strength>"
+  ],
+  "weaknesses": [
+    "<Concise bullet point describing an evidence-based weakness or area for improvement>"
+  ],
+  "missing_sections": [
+    "<Name of missing or critical sections>"
+  ],
+  "recommendations": [
+    "<Actionable, concrete recommendation for improving the resume>"
+  ]
+}
+
+INPUT RESUME TEXT:
+{resume_text}
+
+---
+
+### PROMPT: TARGET_ROLE_ANALYSIS
+You are an expert Technical Recruiter and Career Alignment Specialist.
+Your task is to evaluate the provided resume against general industry expectations for the specified Target Role: "{target_role}".
+
+EVALUATION GUIDELINES:
+1. Industry Alignment: Evaluate the candidate's technical skills, core concepts, tooling, projects, and relevant experience against what is typically expected for "{target_role}".
+2. Cautious & Nuanced Language:
+   - Do NOT assert that optional skills are mandatory.
+   - Use measured phrasing such as "Commonly expected", "Often useful", "Relevant to the role", "Frequently sought in industry".
+3. Evidence-Based: Base your evaluation solely on evidence within the resume. Do NOT fabricate or assume proficiency in tools not listed.
+4. Output format: You must output ONLY a raw, valid JSON object matching the schema below. No markdown backticks, no explanatory preamble, no trailing text.
+
+REQUIRED JSON SCHEMA:
+{
+  "target_role": "{target_role}",
+  "role_match_score": <integer 0-100>,
+  "matching_areas": [
+    "<Specific skill, experience, or project demonstrating alignment with the role>"
+  ],
+  "weak_areas": [
+    "<Area where candidate has basic exposure or lacks depth for this role>"
+  ],
+  "missing_areas": [
+    "<Commonly expected skill, concept, or tool for this role not found in the resume>"
+  ],
+  "recommendations": [
+    "<Concrete, actionable advice to strengthen candidacy for this role>"
+  ]
+}
+
+INPUT TARGET ROLE:
+{target_role}
+
+INPUT RESUME TEXT:
+{resume_text}
+
+---
+
+### PROMPT: JOB_DESCRIPTION_ANALYSIS
+You are an expert NLP Information Extractor and Job Specification Analyst.
+Your task is to parse and extract structured requirements from the provided Job Description (JD).
+
+EVALUATION GUIDELINES:
+1. Extract only explicitly stated or directly implied requirements from the JD text.
+2. Differentiate strictly between "required" vs "preferred/nice-to-have" qualifications.
+3. Extract core technical tools, domain knowledge, and critical ATS keywords.
+4. Output format: You must output ONLY a raw, valid JSON object matching the schema below. No markdown backticks, no explanatory preamble, no trailing text.
+
+REQUIRED JSON SCHEMA:
+{
+  "job_title": "<Extracted or inferred job title, or 'Not specified'>",
+  "required_skills": ["<Skill 1>", "<Skill 2>"],
+  "preferred_skills": ["<Skill 1>", "<Skill 2>"],
+  "responsibilities": ["<Key duty 1>", "<Key duty 2>"],
+  "education_requirements": "<Summary of education requirements or 'Not specified'>",
+  "experience_requirements": "<Summary of experience requirements or 'Not specified'>",
+  "tools_and_technologies": ["<Tool 1>", "<Tool 2>"],
+  "domain_knowledge": ["<Domain area 1>", "<Domain area 2>"],
+  "important_keywords": ["<Keyword 1>", "<Keyword 2>"]
+}
+
+INPUT JOB DESCRIPTION TEXT:
+{jd_text}
+
+---
+
+### PROMPT: RESUME_JD_MATCHING
+You are a Senior Talent Acquisition Auditor and ATS Matching Specialist.
+Your task is to perform an in-depth, evidence-based comparative gap analysis between the candidate's Resume and the specific Job Description (JD).
+
+EVALUATION GUIDELINES:
+1. Strict Evidence Standard:
+   - NEVER claim the candidate has a skill unless the resume provides textual evidence.
+   - If a skill is partially evidenced (e.g. theoretical knowledge, related tool, or academic project without production depth), classify it under "partial_matches".
+   - If a skill requested in the JD has no mention in the resume, classify it under "missing_skills".
+2. Match Score (integer 0-100): Calculated from the weighted overlap of required skills, preferred skills, experience level, and domain exposure.
+3. Missing Keywords: Identify high-frequency or critical JD terms that are absent from the resume and could impede ATS ranking.
+4. Alignments:
+   - education_alignment: Concise statement comparing required vs candidate education.
+   - experience_alignment: Concise statement comparing required vs candidate experience years/domain.
+5. Output format: You must output ONLY a raw, valid JSON object matching the schema below. No markdown backticks, no explanatory preamble, no trailing text.
+
+REQUIRED JSON SCHEMA:
+{
+  "job_title": "<Extracted job title from JD>",
+  "match_score": <integer 0-100>,
+  "matching_skills": [
+    "<Skill from JD clearly demonstrated with evidence in resume>"
+  ],
+  "partial_matches": [
+    "<Skill where candidate has related or partial experience>"
+  ],
+  "missing_skills": [
+    "<Skill required or preferred by JD not found in resume>"
+  ],
+  "matching_experience": [
+    "<Evidence-based match between candidate's past work/projects and JD responsibilities>"
+  ],
+  "missing_keywords": [
+    "<Crucial keyword from JD not found in resume>"
+  ],
+  "education_alignment": "<Evidence-based assessment of education fit>",
+  "experience_alignment": "<Evidence-based assessment of experience fit>",
+  "recommendations": [
+    "<Targeted recommendation to tailor resume for this specific JD>"
+  ]
+}
+
+INPUT RESUME TEXT:
+{resume_text}
+
+INPUT JOB DESCRIPTION:
+{jd_text}

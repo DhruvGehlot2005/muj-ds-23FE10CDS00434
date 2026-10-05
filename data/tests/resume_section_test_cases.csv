@@ -1,0 +1,64 @@
+text,expected_label
+Self-motivated software engineer with deep interest in backend infrastructure and clean API design.,SUMMARY
+Dedicated undergraduate in Information Technology seeking an internship in cloud systems.,SUMMARY
+"Experienced frontend specialist focused on accessible, high-performance web applications.",SUMMARY
+Passionate data science student with experience in predictive modeling and quantitative analysis.,SUMMARY
+Creative full stack engineer committed to building scalable tools for collaborative teams.,SUMMARY
+Results-oriented developer with solid grounding in relational databases and algorithms.,SUMMARY
+Profile: Junior engineer seeking opportunities in distributed systems and cloud services.,SUMMARY
+"Email: marcus.vance@techcorp.io | Phone: +1 555 456 7891 | Seattle, WA",CONTACT
+github.com/developer-alex | alex.dev@inbox.com | Tel: 555-012-3456,CONTACT
+"Contact: sophia.chen@university.edu | Mobile: 555-890-1234 | San Jose, CA",CONTACT
+linkedin.com/in/carlos-mendez | carlos.mendez@mail.net | +1 (555) 321-6549,CONTACT
+"Address: 789 Innovation Way, New York, NY | email: dev.hire@testdomain.com",CONTACT
+"tel: +44 20 8123 4567 | email: uk.applicant@oxford.edu | London, UK",CONTACT
+portfolio: candidate-work.dev | phone: 555-987-1122 | email: hello@candidate-work.dev,CONTACT
+"Bachelor of Science in Information Technology, University of Washington, 2021 - 2025",EDUCATION
+"B.Tech in Computer Engineering, Indian Institute of Technology, CGPA 9.1/10.0, 2024",EDUCATION
+"Master of Science in Software Engineering, Carnegie Mellon University, Silicon Valley, 2023",EDUCATION
+"B.S. in Computer Science with Honors, University of Texas at Dallas, GPA: 3.82",EDUCATION
+"Relevant Coursework: Distributed Systems, Compiler Optimization, Database Management, Linear Algebra",EDUCATION
+"Associate Degree in Computer Programming, City College of San Francisco, 2022",EDUCATION
+"High School Diploma, St. Paul's Academy, Physics & Mathematics, 96%",EDUCATION
+Software Engineer Intern at Stripe (Summer 2024): Built webhook reconciliation endpoints in Python.,EXPERIENCE
+Junior Backend Developer at CloudScale Inc: Optimized Redis caching and PostgreSQL query latency.,EXPERIENCE
+Frontend Developer Intern at UI Studios: Designed responsive checkout workflow using React and Tailwind.,EXPERIENCE
+Graduate Research Assistant at AI Institute: Trained transformer language models on clinical abstracts.,EXPERIENCE
+Site Reliability Intern at DataPipeline Co: Automated Grafana alerts and Prometheus metrics collection.,EXPERIENCE
+QA Engineering Intern at FinTech Labs: Wrote automated integration test suite using pytest and Docker.,EXPERIENCE
+Undergraduate Teaching Assistant: Led weekly programming lab sessions for 45 computer science students.,EXPERIENCE
+Microservices Order Tracker: Built event-driven order processing application with FastAPI and Kafka.,PROJECTS
+"Search Query Ranking Engine: Implemented TF-IDF indexing and vector search over 20,000 documents in Python.",PROJECTS
+Collaborative Canvas Application: Developed real-time whiteboard in React with WebSockets and Canvas API.,PROJECTS
+Cryptocurrency Portfolio Manager: Mobile app built with Flutter and SQLite for offline asset tracking.,PROJECTS
+Image Segmentation Pipeline: Trained U-Net architecture in PyTorch achieving 91% IoU on test set.,PROJECTS
+Autonomous Drone Controller: Programmed sensor fusion and obstacle avoidance on Raspberry Pi in C++.,PROJECTS
+Smart Contract Voting DApp: Implemented decentralized voting protocol using Solidity and Ethereum web3.,PROJECTS
+"Languages: Python, Go, C++, TypeScript, SQL, JavaScript, HTML, CSS, Bash",SKILLS
+"Frameworks: React, Next.js, FastAPI, Node.js, Express, PyTorch, Scikit-learn, Tailwind CSS",SKILLS
+"Databases & Cloud: PostgreSQL, MongoDB, Redis, AWS (EC2, S3, RDS), Docker, Kubernetes",SKILLS
+"Tools & Methodologies: Git, GitHub Actions, Linux CLI, Postman, Jira, Agile Scrum, CI/CD",SKILLS
+"Data Science Tools: Pandas, NumPy, SciPy, Matplotlib, Seaborn, Tableau, Jupyter Notebook",SKILLS
+"Technical Competencies: RESTful API Design, Microservices, Unit Testing, Schema Optimization",SKILLS
+"Core Skills: Data Structures, Algorithms, Object-Oriented Design, Automated Testing, Linux",SKILLS
+AWS Certified Solutions Architect – Associate (Credential ID: AWS-87654321),CERTIFICATIONS
+"Certified Kubernetes Administrator (CKA), Linux Foundation & CNCF, 2024",CERTIFICATIONS
+"Microsoft Certified: Azure Fundamentals (AZ-900), Microsoft, 2023",CERTIFICATIONS
+"Google Cloud Certified Professional Cloud Architect, Google, 2023 - 2026",CERTIFICATIONS
+"Deep Learning Specialization by Andrew Ng on Coursera, 5-course certificate with Honors",CERTIFICATIONS
+"HashiCorp Certified: Terraform Associate, HashiCorp, Verified Badge 2023",CERTIFICATIONS
+"Oracle Certified Professional: Java SE 17 Developer, Oracle Corporation, 2023",CERTIFICATIONS
+1st Place Winner at HackMIT 2023 among 250+ collegiate engineering teams.,ACHIEVEMENTS
+Ranked in the top 0.5% globally in Google Kickstart competitive programming round.,ACHIEVEMENTS
+Published first-author paper on NLP model evaluation at EMNLP Student Workshop 2024.,ACHIEVEMENTS
+Awarded University Chancellor's Gold Medal for highest cumulative GPA in Engineering.,ACHIEVEMENTS
+"Recipient of Microsoft Undergraduate Diversity Scholarship ($10,000 merit award).",ACHIEVEMENTS
+Solved 600+ problems on LeetCode with top 4% worldwide contest ranking.,ACHIEVEMENTS
+Won Best Open Source Tool Award at Global Python Conference 2023.,ACHIEVEMENTS
+Fluent in English and Spanish; conversational proficiency in Mandarin Chinese.,OTHER
+"Interests: Marathon training, competitive chess, and volunteering at animal shelters.",OTHER
+"Hobbies: Acoustic guitar, landscape film photography, and hiking national parks.",OTHER
+Volunteer Experience: Conducted weekly weekend coding workshops for local high school students.,OTHER
+"Extracurricular: President of University Open Source Club, organizing annual hackathons.",OTHER
+"Personal: Amateur radio operator (Callsign: W1AW), interested in wireless mesh networks.",OTHER
+Willing to relocate. References and transcripts available upon request.,OTHER

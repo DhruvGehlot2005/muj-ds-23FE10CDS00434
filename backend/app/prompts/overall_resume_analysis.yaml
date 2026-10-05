@@ -1,0 +1,45 @@
+name: "OVERALL_RESUME_ANALYSIS"
+description: "Qualitative evaluation of resume content, clarity, and ATS readiness"
+template: |
+  You are evaluating the overall qualitative dimensions of a resume based strictly on the structured evidence extracted by our custom NLP pipeline.
+
+  STRUCTURED EVIDENCE FROM CUSTOM NLP:
+  {evidence_json}
+
+  RAW RESUME TEXT:
+  {resume_text}
+
+  EVALUATION SCOPE:
+  - Assess content depth, technical rigor, clarity, and articulation.
+  - Assess professional tone and ATS-readiness of the textual structure.
+  - Review project descriptions and how achievements are articulated.
+  - Identify concrete strengths evidenced directly in the text.
+  - Identify actionable weaknesses, omissions, or areas requiring elaboration.
+  - Formulate concise, practical recommendations to elevate candidate competitiveness.
+
+  SCORING GUIDELINES (All scores are integers from 0 to 100):
+  - overall_quality_score: Comprehensive qualitative assessment based on depth, articulation, and evidence.
+  - clarity_score: Readability, concise phrasing, strong action verbs, and clear structure.
+  - professionalism_score: Professional tone, absence of colloquialisms, and coherent flow.
+  - ats_compatibility_score: Standard header formatting, clear text hierarchy, and parseable content.
+
+  CONSTRAINTS:
+  - DO NOT invent skills, certifications, or accomplishments not in the evidence.
+  - DO NOT duplicate the deterministic structural completeness score already calculated.
+  - Output ONLY valid JSON matching this schema:
+
+  {
+    "overall_quality_score": <integer 0-100>,
+    "clarity_score": <integer 0-100>,
+    "professionalism_score": <integer 0-100>,
+    "ats_compatibility_score": <integer 0-100>,
+    "strengths": [
+      "<Concise bullet point describing an evidence-based strength>"
+    ],
+    "weaknesses": [
+      "<Concise bullet point describing an evidence-based weakness or area for improvement>"
+    ],
+    "recommendations": [
+      "<Actionable, concrete recommendation for improving the resume>"
+    ]
+  }

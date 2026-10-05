@@ -1,0 +1,369 @@
+{
+  "model_architecture": "TF-IDF (1-2 ngrams) + Logistic Regression (C=1.5, balanced)",
+  "classes": [
+    "ACHIEVEMENTS",
+    "CERTIFICATIONS",
+    "CONTACT",
+    "EDUCATION",
+    "EXPERIENCE",
+    "OTHER",
+    "PROJECTS",
+    "SKILLS",
+    "SUMMARY"
+  ],
+  "training_sample_count": 324,
+  "validation_sample_count": 81,
+  "validation_metrics": {
+    "accuracy": 0.8518518518518519,
+    "precision_macro": 0.874074074074074,
+    "recall_macro": 0.8518518518518517,
+    "f1_macro": 0.8548300454176077,
+    "classification_report": {
+      "ACHIEVEMENTS": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7777777777777778,
+        "f1-score": 0.7777777777777778,
+        "support": 9.0
+      },
+      "CERTIFICATIONS": {
+        "precision": 1.0,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.9411764705882353,
+        "support": 9.0
+      },
+      "CONTACT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 9.0
+      },
+      "EDUCATION": {
+        "precision": 0.6428571428571429,
+        "recall": 1.0,
+        "f1-score": 0.782608695652174,
+        "support": 9.0
+      },
+      "EXPERIENCE": {
+        "precision": 1.0,
+        "recall": 0.7777777777777778,
+        "f1-score": 0.875,
+        "support": 9.0
+      },
+      "OTHER": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8888888888888888,
+        "support": 9.0
+      },
+      "PROJECTS": {
+        "precision": 0.7,
+        "recall": 0.7777777777777778,
+        "f1-score": 0.7368421052631579,
+        "support": 9.0
+      },
+      "SKILLS": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.75,
+        "support": 9.0
+      },
+      "SUMMARY": {
+        "precision": 1.0,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.9411764705882353,
+        "support": 9.0
+      },
+      "accuracy": 0.8518518518518519,
+      "macro avg": {
+        "precision": 0.874074074074074,
+        "recall": 0.8518518518518517,
+        "f1-score": 0.8548300454176077,
+        "support": 81.0
+      },
+      "weighted avg": {
+        "precision": 0.874074074074074,
+        "recall": 0.8518518518518519,
+        "f1-score": 0.8548300454176077,
+        "support": 81.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        7,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        8
+      ]
+    ]
+  },
+  "unseen_test_cases_metrics": {
+    "test_sample_count": 63,
+    "accuracy": 0.9682539682539683,
+    "f1_macro": 0.9680911680911682,
+    "precision_macro": 0.9722222222222222,
+    "recall_macro": 0.9682539682539684,
+    "classification_report": {
+      "ACHIEVEMENTS": {
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1-score": 0.9333333333333333,
+        "support": 7.0
+      },
+      "CERTIFICATIONS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 7.0
+      },
+      "CONTACT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 7.0
+      },
+      "EDUCATION": {
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1-score": 0.9333333333333333,
+        "support": 7.0
+      },
+      "EXPERIENCE": {
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.9230769230769231,
+        "support": 7.0
+      },
+      "OTHER": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 7.0
+      },
+      "PROJECTS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 7.0
+      },
+      "SKILLS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 7.0
+      },
+      "SUMMARY": {
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.9230769230769231,
+        "support": 7.0
+      },
+      "accuracy": 0.9682539682539683,
+      "macro avg": {
+        "precision": 0.9722222222222222,
+        "recall": 0.9682539682539684,
+        "f1-score": 0.9680911680911682,
+        "support": 63.0
+      },
+      "weighted avg": {
+        "precision": 0.9722222222222222,
+        "recall": 0.9682539682539683,
+        "f1-score": 0.9680911680911681,
+        "support": 63.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    ]
+  }
+}

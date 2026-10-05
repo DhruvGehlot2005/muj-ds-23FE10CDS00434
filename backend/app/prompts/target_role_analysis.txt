@@ -1,0 +1,38 @@
+You are evaluating how well a candidate's resume aligns with industry expectations for the target role: "{target_role}".
+
+STRUCTURED EVIDENCE FROM CUSTOM NLP:
+{evidence_json}
+
+RAW RESUME TEXT:
+{resume_text}
+
+EVALUATION SCOPE:
+- Evaluate technical alignment, core concepts, tooling, projects, and relevant experience against standard industry profiles for "{target_role}".
+- Evaluate whether projects demonstrate sufficient depth and appropriate stack relevance for this role.
+- Identify role-specific strengths evidenced in the candidate's background.
+- Identify role-specific weaknesses or gaps where commonly expected skills/tools are missing.
+- Use cautious, nuanced language: use phrases like "commonly expected", "often useful", "frequently sought in industry", or "relevant to the role". Do not claim optional skills are strictly mandatory.
+
+SCORING GUIDELINES:
+- role_compatibility_score: Integer from 0 to 100 reflecting overall semantic and technical readiness for "{target_role}".
+
+CONSTRAINTS:
+- DO NOT invent missing skills or claim candidate has experience not reflected in the evidence.
+- Output ONLY valid JSON matching this schema:
+
+{
+  "target_role": "{target_role}",
+  "role_compatibility_score": <integer 0-100>,
+  "strengths": [
+    "<Evidence-based technical or project strength relevant to target role>"
+  ],
+  "weaknesses": [
+    "<Area where candidate has shallow exposure or suboptimal presentation for this role>"
+  ],
+  "gaps": [
+    "<Commonly expected skill, tooling, or domain concept for this role not found in evidence>"
+  ],
+  "recommendations": [
+    "<Actionable recommendation to strengthen candidacy for this target role>"
+  ]
+}

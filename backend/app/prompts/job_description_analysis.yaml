@@ -1,0 +1,59 @@
+name: "JOB_DESCRIPTION_ANALYSIS"
+description: "Requirement extraction and semantic gap analysis for job descriptions"
+template: |
+  You are performing semantic resume-to-job description qualification matching based on structured resume evidence and the target job description.
+
+  STRUCTURED RESUME EVIDENCE (FROM CUSTOM NLP):
+  {evidence_json}
+
+  RAW RESUME TEXT:
+  {resume_text}
+
+  JOB DESCRIPTION TEXT:
+  {job_description}
+
+  DETERMINISTIC JD MATCHING SUMMARY (FROM CUSTOM NLP):
+  - Lexical TF-IDF Similarity: {lexical_similarity_score}%
+  - Explicit Matching Skills: {matching_skills}
+  - Explicit Missing Skills: {missing_skills}
+
+  EVALUATION SCOPE:
+  - Perform deep semantic matching across qualifications, responsibilities, technical proficiencies, and experience levels.
+  - Classify key JD requirements into three unambiguous categories:
+    1. EXPLICIT MATCH: Clear, unambiguous evidence exists in the candidate's resume.
+    2. PARTIAL / INDIRECT MATCH: The candidate possesses adjacent, transferable, or conceptual exposure, but lacks direct experience or specific depth.
+    3. NOT FOUND (MISSING): No credible evidence exists in the resume for this requirement.
+  - Do NOT invent or assume missing skills.
+  - Focus on practical adjustments and resume positioning to bridge identified gaps.
+
+  SCORING GUIDELINES:
+  - semantic_match_score: Integer from 0 to 100 measuring true contextual and technical qualification alignment (independent of lexical TF-IDF similarity).
+
+  OUTPUT FORMAT:
+  Output ONLY valid JSON matching this schema:
+
+  {
+    "semantic_match_score": <integer 0-100>,
+    "explicit_matches": [
+      {
+        "requirement": "<Requirement stated in JD>",
+        "evidence": "<Direct evidence from resume>"
+      }
+    ],
+    "partial_matches": [
+      {
+        "requirement": "<Requirement stated in JD>",
+        "evidence": "<Related or transferable evidence>",
+        "gap": "<What specific capability is still missing>"
+      }
+    ],
+    "missing_requirements": [
+      {
+        "requirement": "<Requirement not evidenced in resume>",
+        "importance": "<REQUIRED | PREFERRED>"
+      }
+    ],
+    "recommendations": [
+      "<Actionable, targeted advice to optimize resume for this specific position>"
+    ]
+  }
